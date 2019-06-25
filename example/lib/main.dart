@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
+  String _videoResultMessage = 'UnknownVideo';
 
   @override
   void initState() {
@@ -23,6 +24,7 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
+    String videoResultMessage;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       platformVersion = await FlutterStcTutk.platformVersion;
@@ -45,10 +47,36 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: Text('Sample on: $_platformVersion\n'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                width: 380,
+                height: 380,
+                child: UiKitView(
+                  viewType: 'stc_video_player_view'
+                ),
+              ),
+              FloatingActionButton(
+                  onPressed: () {
+                    FlutterStcTutk.startLiveVideo("ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
+                  },
+                  child: Text(
+                    "Start"
+                  ),
+                ),
+              FloatingActionButton(
+                  onPressed: () {
+                    FlutterStcTutk.stopLiveVideo("ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
+                  },
+                  child: Text(
+                    "Stop"
+                  ),
+                )
+            ]
+          )
         ),
       ),
     );

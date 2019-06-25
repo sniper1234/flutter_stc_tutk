@@ -1,4 +1,4 @@
 #import <Flutter/Flutter.h>
 
-@interface FlutterStcTutkPlugin : NSObject<FlutterPlugin>
+@interface FlutterStcTutkPlugin : NSObject <FlutterPlugin>
 @end

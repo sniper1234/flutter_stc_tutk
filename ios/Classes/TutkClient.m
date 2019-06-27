@@ -219,7 +219,7 @@
         if(ret == AV_ER_DATA_NOREADY)
         {
             //NSLog(@"Video data not ready");
-            usleep(10000);
+            usleep(30000);
             continue;
         }
         else if(ret == AV_ER_LOSED_THIS_FRAME)

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_stc_tutk/flutter_stc_tutk.dart';
 
@@ -50,34 +50,35 @@ class _MyAppState extends State<MyApp> {
           title: Text('Sample on: $_platformVersion\n'),
         ),
         body: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                width: 380,
-                height: 380,
-                child: UiKitView(
-                  viewType: 'stc_video_player_view'
-                ),
-              ),
-              FloatingActionButton(
-                  onPressed: () {
-                    FlutterStcTutk.startLiveVideo("ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
-                  },
-                  child: Text(
-                    "Start"
-                  ),
-                ),
-              FloatingActionButton(
-                  onPressed: () {
-                    FlutterStcTutk.stopLiveVideo("ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
-                  },
-                  child: Text(
-                    "Stop"
-                  ),
-                )
-            ]
+            child: Column(children: <Widget>[
+          SizedBox(
+              width: 380,
+              height: 380,
+              child: Platform.isIOS
+                  ? UiKitView(viewType: 'stc_video_player_view')
+                  : (Platform.isAndroid
+                      ? AndroidView(
+                          viewType: 'stc_video_player_view',
+                        )
+                      : Container(
+                          height: 0,
+                          width: 0,
+                        ))),
+          FloatingActionButton(
+            onPressed: () {
+              FlutterStcTutk.startLiveVideo(
+                  "ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
+            },
+            child: Text("Start"),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              FlutterStcTutk.stopLiveVideo(
+                  "ABXG1TRYG5PRSD1R111A", "T39S24CTY4TZ");
+            },
+            child: Text("Stop"),
           )
-        ),
+        ])),
       ),
     );
   }

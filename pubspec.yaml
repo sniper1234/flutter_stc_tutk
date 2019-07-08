@@ -1,6 +1,6 @@
 name: flutter_stc_tutk
 description: A plugin for Scenes App to connect with TUTK and display video.
-version: 0.0.1
+version: 0.0.3
 author: Pengfei Chen<lawrence.sun@scenestek.com>
 homepage: https://github.com/sniper1234/flutter_stc_tutk
 

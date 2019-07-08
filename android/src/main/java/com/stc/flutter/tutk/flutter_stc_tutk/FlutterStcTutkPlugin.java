@@ -76,7 +76,8 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
                 startLiveVideo(uid, deviceSN);
                 break;
             case "stopLiveVideo": //停止视频
-
+                m_commApis.stopSess();
+                m_commApis.unInitIOTC();
                 break;
             case "pauseLiveVideo": //暂停视频
 
@@ -102,7 +103,7 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
             } catch (Exception e) {
             }
         }
-        m_commApis.start(uid, decoder.getHandler());
+        m_commApis.start(uid, deviceSN, decoder.getHandler());
 
     }
 

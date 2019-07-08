@@ -16,26 +16,12 @@ import java.util.Arrays;
 public class CommApis extends IOTCAPIs {
 
 
-    public static final int COMMAPIS_STOPPED = -1001;
-    private static final int CMD_REQUEST_DATA_CH = 1;
-    private static final int CMD_DATA_CHANNEL_ON = 2;
-
-
     public static int ms_nIOTCInit = IOTCAPIs.IOTC_ER_TIMEOUT;
-    private int nFristGet = 0;
+
     private int nSID = -1;
     protected String m_strUID;
     protected int avIndex = -1;
-    protected boolean m_bAsDevice = true;
-    protected St_SInfo m_stSInfo = new St_SInfo();
 
-    boolean m_bStoped = true;
-    boolean m_bStopedSearch = true;
-    boolean mbStopedSure = true;
-    boolean mb_bStopedGetDate = true;
-
-    public static final int STATUS_INIT_SEARCH_DEV = 10;
-    int m_nSearchDev = STATUS_INIT_SEARCH_DEV;
 
     private Handler handler;
 
@@ -46,13 +32,12 @@ public class CommApis extends IOTCAPIs {
     public int initIOTC() {
         if (ms_nIOTCInit != IOTCAPIs.IOTC_ER_NoERROR) {
             ms_nIOTCInit = IOTC_Initialize2(0);
-//            mLanSearch();
             return ms_nIOTCInit;
         }
         return 0;
     }
 
-    public void intiAVAPI(String uid) {
+    private void intiAVAPI(String uid, String deviceSN) {
         int media_chanel;
         while (true) {
             AVAPIs.avInitialize(8);
@@ -85,7 +70,7 @@ public class CommApis extends IOTCAPIs {
             }
         }
         if (avIndex >= 0) {
-            int startLiveVideoResult = TutkLoctlCommand.startLiveVideo(nSID, media_chanel);
+            int startLiveVideoResult = TutkLoctlCommand.startLiveVideo(nSID, media_chanel, deviceSN);
             if (startLiveVideoResult >= 0) {
                 System.out.printf("Step 5: 播放视频指令发送成功(%d) ret = %d\n", nSID, startLiveVideoResult);
 
@@ -117,37 +102,24 @@ public class CommApis extends IOTCAPIs {
     public void unInitIOTC() {
         if (ms_nIOTCInit == IOTCAPIs.IOTC_ER_NoERROR) {
             IOTC_DeInitialize();
-            nFristGet = 0;
             ms_nIOTCInit = IOTCAPIs.IOTC_ER_TIMEOUT;
 
         }
     }
 
-    protected void setLog(int msgType, String strLog) {
-        Message msg = new Message();
-        msg.what = msgType;
-        msg.obj = strLog;
-    }
-
 
     public void stopSess() {
-        mbStopedSure = true;
-        m_bStoped = true;
-        m_bStopedSearch = true;
+
 
         IOTC_Connect_Stop();
 
     }
 
 
-    public void start(String strUID, Handler handler) {
+    void start(String strUID, String deviceSN, Handler handler) {
         m_strUID = strUID;
         this.handler = handler;
-        m_bStoped = false;
-        mbStopedSure = false;
-        m_bStopedSearch = false;
-        intiAVAPI(m_strUID);
-        nFristGet++;
+        intiAVAPI(m_strUID, deviceSN);
     }
 
 
@@ -175,7 +147,6 @@ public class CommApis extends IOTCAPIs {
             System.out.printf("start_ipcam_stream failed[%d]\n", ret);
             return false;
         }
-
         return true;
     }
 

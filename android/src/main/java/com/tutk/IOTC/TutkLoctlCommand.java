@@ -15,7 +15,7 @@ public class TutkLoctlCommand {
     public static native int login(int sid, int mediaChannel, String userName, String password);
 
 
-    public static native int startLiveVideo(int sid, int mediaChannel);
+    public static native int startLiveVideo(int sid, int mediaChannel,String deviceSN);
 
     public static native void stopAv(int sid, int currentAvIndex);
 

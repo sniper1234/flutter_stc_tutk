@@ -135,14 +135,18 @@ NSString * const naluTypesStrings[] =
         
         // find what the second NALU type is
         nalu_type = (frame[secondStartCodeIndex + 4] & 0x1F);
-        // NSLog(@"~~~~~~~ Received NALU Type \"%@\" ~~~~~~~~", naluTypesStrings[nalu_type]);
+//        NSLog(@"~~~~~~~ Received NALU Type \"%@\" ~~~~~~~~", naluTypesStrings[nalu_type]);
+        
+//        NSString* filePath = [NSString stringWithFormat:@"%@-%lld", [[NSBundle mainBundle] bundlePath], (int64_t)[NSDate date].timeIntervalSince1970];
+//        NSData* data = [[NSData alloc] initWithBytes:frame length:frameSize];
+//        [data writeToFile:filePath atomically:YES];
     }
     
     // type 8 is the PPS parameter NALU
     if(nalu_type == 8)
     {
         // find where the NALU after this one starts so we know how long the PPS parameter is
-        for (int i = _spsSize + 4; i < _spsSize + 30; i++)
+        for (int i = _spsSize + 4; i < _spsSize + 40; i++)
         {
             if (frame[i] == 0x00 && frame[i+1] == 0x00 && frame[i+2] == 0x00 && frame[i+3] == 0x01)
             {
@@ -182,7 +186,7 @@ NSString * const naluTypesStrings[] =
                                                                      parameterSetSizes, 4,
                                                                      &_formatDesc);
         
-        NSLog(@"\t\t Creation of CMVideoFormatDescription: %@", (status == noErr) ? @"successful!" : @"failed...");
+        // NSLog(@"\t\t Creation of CMVideoFormatDescription: %@", (status == noErr) ? @"successful!" : @"failed...");
         if(status != noErr) NSLog(@"\t\t Format Description ERROR type: %d", (int)status);
         
         // See if decomp session can convert from previous format description
@@ -198,7 +202,7 @@ NSString * const naluTypesStrings[] =
         // I say "should" because that's how I expect my H264 stream to work, YMMV
         if (thirdStartCodeIndex > 0) {
             nalu_type = (frame[thirdStartCodeIndex + 4] & 0x1F);
-            // NSLog(@"~~~~~~~ Received NALU Type \"%@\" ~~~~~~~~", naluTypesStrings[nalu_type]);
+           // NSLog(@"~~~~~~~ Received NALU Type \"%@\" ~~~~~~~~", naluTypesStrings[nalu_type]);
         }
     }
     
@@ -231,7 +235,7 @@ NSString * const naluTypesStrings[] =
                                                     blockLength,   // dataLength of relevant bytes, starting at offsetToData
                                                     0, &blockBuffer);
         
-       // NSLog(@"\t\t BlockBufferCreation: \t %@", (status == kCMBlockBufferNoErr) ? @"successful!" : @"failed...");
+       NSLog(@"\t\t BlockBufferCreation: \t %@", (status == kCMBlockBufferNoErr) ? @"successful!" : @"failed...");
     }
     
     // NALU type 1 is non-IDR (or PFrame) picture

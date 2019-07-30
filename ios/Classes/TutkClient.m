@@ -27,6 +27,7 @@
 #define AUDIO_BUF_SIZE    1024
 #define VIDEO_BUF_SIZE    2000000
 #define MAX_BUF_SIZE 102400
+#define FRAME_BUF_SIZE    5000000
 
 @interface TutkClient()
 
@@ -39,6 +40,9 @@
 
 @property(nonatomic) NSMutableDictionary* channelInfo;
 
+@property(nonatomic) uint frameNo;
+
+@property(nonatomic) NSString* filePath;
 @end
 
 @implementation TutkClient
@@ -167,6 +171,9 @@
 }
 
 - (void) requestLiveVideo:(NSString*) deviceSN {
+    
+    self.filePath = [NSString stringWithFormat:@"%@-%lld", [[NSBundle mainBundle] bundlePath], (int64_t)[NSDate date].timeIntervalSince1970];
+    
     int ret = 0;
     
     //|Length|TUTK_IOCTL_TYPE|根据主命令变化|命令数据|
@@ -202,15 +209,18 @@
 
 -(void) receiveVideoThread
 {
-    NSLog(@"[thread_ReceiveVideo] Starting...");
+    NSLog(@"[thread_ReceiveVideo] Start Receiving...");
     
     int avIndex = self.currentAvIndex;
     char *buf = malloc(VIDEO_BUF_SIZE);
-    unsigned int frmNo;
+    char* frameBuffer = malloc(FRAME_BUF_SIZE);
+    unsigned int frmNo = 0;
     int actualFrameSize=0, expectedFrameSize=0;
     int actualInfoSize=0;
     int ret;
     FRAMEINFO_t frameInfo;
+    int frameBufferIndex = 0;
+    self.frameNo = 0;
     
     while (![self.videoThread isCancelled])
     {
@@ -218,7 +228,7 @@
         
         if(ret == AV_ER_DATA_NOREADY)
         {
-            //NSLog(@"Video data not ready");
+            //NSLog(@"Video data not ready");X
             usleep(30000);
             continue;
         }
@@ -256,11 +266,65 @@
         
        // NSLog(@"[thread_ReceiveVideo]  got an IFrame, draw it");
         
-        [self.delegate tutkClient:self didReceiveVideoFrame:buf frameSize:actualFrameSize frameNumber:frmNo uid:self.uid deviceSN:self.deviceSN];
+//        NSData* frameData = [[NSData alloc] initWithBytes:buf length:actualFrameSize];
+//        NSMutableData* allData = [NSMutableData dataWithContentsOfFile:self.filePath options:NSDataReadingUncached error:nil];
+//        if (allData == nil) {
+//            allData = [[NSMutableData alloc] init];
+//        }
+//        [allData appendData:frameData];
+//        [allData writeToFile:self.filePath atomically:true];
+        
+        // Put data into frame buffer
+        memcpy((char*)(frameBuffer + frameBufferIndex), buf, actualFrameSize);
+        frameBufferIndex += actualFrameSize;
+        
+        // Extract frame from frame buffer
+        int frameStartIdex = -1;
+        int frameEndIndex = -1;
+        for (int i = 0; i < frameBufferIndex; i++) {
+            if ((int8_t)frameBuffer[i] == 0x00 && (int8_t)frameBuffer[i+1] == 0x00 && (int8_t)frameBuffer[i+2] == 0x00 && (int8_t)frameBuffer[i+3] == 0x01) {
+                
+                int nalu_type = (frameBuffer[4] & 0x1F);
+                if (nalu_type == 5) {
+                    NSLog(@"TutkClient: receive nalu %d", nalu_type);
+                }
+                
+                if (frameStartIdex < 0) {
+                    frameStartIdex = i;
+                    i = i + 4;
+                    continue;
+                }
+                
+                frameEndIndex = i;
+     
+                // Found one frame
+                if (frameStartIdex >=0 && frameEndIndex >= 0) {
+                    
+                    int fsize = frameEndIndex - frameStartIdex;
+                    [self processVideoFrame:(char*)(frameBuffer + frameStartIdex) frameSize:fsize];
+                    
+                    frameStartIdex = frameEndIndex;
+                    frameEndIndex = -1;
+                }
+                
+            }
+        }
+        
+        // reset the frame buffer to receive new data
+        if (frameStartIdex >= 0) {
+            memcpy(frameBuffer, (char*)(frameBuffer + frameStartIdex) , frameBufferIndex - frameStartIdex);
+            frameBufferIndex = frameBufferIndex - frameStartIdex;
+        }
     }
     free(buf);
+    free(frameBuffer);
     NSLog(@"[thread_ReceiveVideo] thread exit");
     return;
+}
+
+- (void) processVideoFrame: (char*) frame frameSize: (int) frameSize {
+    [self.delegate tutkClient:self didReceiveVideoFrame:frame frameSize:frameSize frameNumber:self.frameNo uid:self.uid deviceSN:self.deviceSN];
+    self.frameNo = self.frameNo + 1;
 }
 
 - (void)startReceiveVideoThread {

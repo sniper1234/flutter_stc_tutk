@@ -4,18 +4,18 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios`)
+  - Flutter (from `.symlinks/flutter/ios-release`)
   - flutter_stc_tutk (from `.symlinks/plugins/flutter_stc_tutk/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: ".symlinks/flutter/ios"
+    :path: ".symlinks/flutter/ios-release"
   flutter_stc_tutk:
     :path: ".symlinks/plugins/flutter_stc_tutk/ios"
 
 SPEC CHECKSUMS:
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
-  flutter_stc_tutk: 1f7768b535bb194f2279cdaabab1bc89a87da3b4
+  flutter_stc_tutk: 7b330e98e263f63f1f605b1423641ed2947f4b81
 
 PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
 

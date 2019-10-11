@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
           FloatingActionButton(
             onPressed: () {
               FlutterStcTutk.startLiveVideo(
-                  "ABXG1TRYG5PRSD1R111A", "T39S24C20FPY");
+                  "ABXG1TRYG5PRSD1R111A", "T39S24CM2BF1");
             },
             child: Text("Start"),
           ),

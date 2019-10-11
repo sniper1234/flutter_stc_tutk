@@ -1,13 +1,13 @@
 #import "FlutterStcTutkPlugin.h"
 #import "VideoPlayerViewFactory.h"
-#import "TutkClient.h"
+#import "TutkClientManager.h"
 #import "VideoDecompressor.h"
 
 
-@interface FlutterStcTutkPlugin()<TutkClientDelegate>
+@interface FlutterStcTutkPlugin()<TutkCientManagerDelegate>
 
 @property (nonatomic, weak) VideoPlayerViewFactory* videoPlayerViewFactory;
-@property (nonatomic) TutkClient* tutkClient;
+@property (nonatomic) TutkClientManager* tutkClientManager;
 
 @end
 
@@ -23,8 +23,8 @@
     [registrar registerViewFactory:factory withId:@"stc_video_player_view"];
     instance.videoPlayerViewFactory = factory;
     
-    instance.tutkClient = [[TutkClient alloc] init];
-    instance.tutkClient.delegate = instance;
+    instance.tutkClientManager = [[TutkClientManager alloc] init];
+    instance.tutkClientManager.delegate = instance;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
@@ -50,20 +50,21 @@
 
 - (NSString*)startLiveVideo:(NSString*) uid deviceSN:(NSString*) deviceSN {
     
-    [self.tutkClient startLiveVideo:uid deviceSN:deviceSN];
+    NSLog(@"FlutterStcTutkPlugin.startLiveVideo: uid=%@,deviceSN=%@", uid, deviceSN);
+    [self.tutkClientManager startLiveVideo:uid deviceSN:deviceSN];
     
-    NSLog(@"startLiveVideo uid:%@ deviceSN:%@", uid, deviceSN);
     return  @"success";
 }
 
 - (NSString*)stopLiveVideo:(NSString*) uid deviceSN:(NSString*) deviceSN {
-    NSLog(@"stopLiveVideo uid:%@ deviceSN:%@", uid, deviceSN);
+    NSLog(@"FlutterStcTutkPlugin.stopLiveVideo: uid=%@,deviceSN=%@", uid, deviceSN);
     
-    [self.tutkClient stopLiveVideo:uid deviceSN:deviceSN];
+    [self.tutkClientManager stopLiveVideo:uid deviceSN:deviceSN];
     return @"success";
 }
 
--(void)tutkClient:(TutkClient *)client didReceiveVideoFrame:(char *)frameBuffer frameSize:(int)frameSize frameNumber:(int)frameNumber uid:(NSString *)uid deviceSN:(NSString *)deviceSN {
+- (void)tutkClientManager:(TutkClientManager*)manager didReceiveVideoFrame:(char*) frameBuffer frameSize:(int) frameSize frameNumber:(int) frameNumber uid: (NSString*) uid deviceSN:(NSString*) deviceSN {
+    
     [self.videoPlayerViewFactory.videoPlayerView showFrame:(uint8_t*)frameBuffer withFrameSize:frameSize];
 }
 

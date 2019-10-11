@@ -17,7 +17,7 @@ The Flutter iOS SDK library for STC scenes app based on Tutk. It is only used fo
   s.dependency 'Flutter'
 
   s.ios.deployment_target = '9.0'
-  s.frameworks = 'UIKit', 'Foundation', 'AVFoundation', 'CoreVideo', 'CoreMedia', 'VideoToolbox', 'CoreGraphics'
-  s.vendored_libraries = 'Libraries/libIOTCAPIs_ALL.a'
+  s.frameworks = 'UIKit', 'Foundation', 'AVFoundation', 'CoreVideo', 'CoreMedia', 'VideoToolbox', 'CoreGraphics', 'CoreData'
+  s.vendored_libraries = 'Libraries/libIOTCAPIs_ALL.a', 'Libraries/libIOTCAPIs_P2PTunnel.a'
 end
 

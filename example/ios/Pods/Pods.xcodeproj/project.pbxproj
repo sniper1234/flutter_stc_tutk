@@ -1,0 +1,992 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Flutter;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0472E714C4E9DA6D42AF22094CF3DD4C /* VideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4AF292494BBF52AE2E938BAB589B75 /* VideoPlayerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1873307C96728E5DC1C0C39DA2AF5512 /* SocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E80A2B21314CFD38F74F8A14CD63119 /* SocketClient.m */; };
+		1940561A7B2FD040F95A8739DC7BCE71 /* FlutterStcTutkPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B25B9466349B2C5982F4139FFA471B /* FlutterStcTutkPlugin.m */; };
+		1B103F31FB5EA974114144571BF2590E /* VideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF80733757B1DBB08CB13716EE215501 /* VideoView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1C75B98D42CEF4E5D95ECEAD5DE10CC9 /* P2PTunnelAPIs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC67BA74E27F2CF878029FDA51E8B18 /* P2PTunnelAPIs.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CD2F7F78A6917A96C8A1CFDD02D6B5F /* VideoPlayerViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7EA96F89BE1B31A39830F60DC72268 /* VideoPlayerViewFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F887154CB508B0C929B05A4C774851F /* TutkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 882D01D0E1044578A4D274DF66202490 /* TutkClient.m */; };
+		21517C23CAFFD4E48D428A5BE7963D50 /* TutkCommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5352531162F7BD3A701D35503D676643 /* TutkCommandManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		38538695C1414433CCFDC881F2E2D106 /* TutkTunnelClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D4135FE5EE131AEC42B8AFA88B480199 /* TutkTunnelClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E002AC2E4419611614BE5DFABA82452 /* TutkLoctlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FF9F6E16F328E601D9462D1B56D248 /* TutkLoctlCommand.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44EB974E609A7D7E582F96C0E0D0C62A /* TutkTunnelClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CF92120EE4401BE0518F1FDFBF2D5F /* TutkTunnelClient.m */; };
+		4ED0EC2B801456F5D1D063E2FCA29188 /* NaluFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE678EA35F064B32DD45B60D5FC931B /* NaluFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		512E01444440CAA5B01E07A9CAE1716B /* RDTAPIs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EF863111361FD390771CCE88827330E /* RDTAPIs.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57CBDFDA494558C3567DE52FD026A293 /* platform_Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F215E4C46FA64D4DB3F724680D453AA /* platform_Config.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69ED6B054C38B4C195E8D6745D2E7B5F /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBE214423F3189F08E96E8C1DC3C87F /* VideoPlayerView.m */; };
+		6EEEB10C1E206243879F9291F3612DE3 /* SocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A1562262B816BD185530C95C47BFEE3 /* SocketClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B1232D1CEFBB507E4C883E04526A7BF /* TutkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7FBC98C1CE12F1429E725F0F7EA434 /* TutkClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81096B8C919D0733918080220B503808 /* AVAPIs2.h in Headers */ = {isa = PBXBuildFile; fileRef = B96BC5C61F2983ADC1E3DFCEEF624A67 /* AVAPIs2.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		89FE9440C143DE6BA88FEC165F55D51A /* TUTKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A970CAB09EB9C4FCC0F0434F2DD939FE /* TUTKConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BFAC07C53493073E3754A083BA8DDC1 /* AVIOCTRLDEFs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC13F6809118E0A0A9F16352BB64638 /* AVIOCTRLDEFs.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		977CFE987601454F0DDBCB9CA923A6E0 /* VideoDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 944FF8113AC433F01214CE993B171CA4 /* VideoDecompressor.m */; };
+		9B534BE9A8019A62E7014F1B6B214F3E /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B665294547DECB72F5498C604C67E00 /* VideoView.m */; };
+		9BE798DFEA4948A47396377435F71B4B /* AVAPIs.h in Headers */ = {isa = PBXBuildFile; fileRef = 978E98EF940F5DC6D899C857AF65E712 /* AVAPIs.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D7679B858629F9FAB8D5F972C3C6907 /* VideoPlayerViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C938FF6934C03E6E0FD25EEB7F871 /* VideoPlayerViewFactory.m */; };
+		B8DD1688A74E8979BF337660321F53B1 /* IOTCAPIs.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFADF1E6E35C58C61462D21B0D74A18 /* IOTCAPIs.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF142CE90C5A7EAEBACA802D7BE9DB97 /* AVFRAMEINFO.h in Headers */ = {isa = PBXBuildFile; fileRef = BD426538DFAB7E2FE2E86AD874663209 /* AVFRAMEINFO.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CAA84A37F08D1AFFBB6E10827BFD3F34 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB8FFF62F4BCF0BA942F28F4B469FC2 /* Pods-Runner-dummy.m */; };
+		D4F4D5B62431A655430AF6908C2543B8 /* VideoDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0797A3A83AD75C66EEAF04FDB50A42 /* VideoDecompressor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D655CD9727B23E4FA93682C963343901 /* TutkClientManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D513F0940EC0FEF6579A111547699C4D /* TutkClientManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6864250543C28FDBCDC09843BD1A2CE /* flutter_stc_tutk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8515B80EF9971C8130DAA0737DEF266B /* flutter_stc_tutk-dummy.m */; };
+		D90C3CD035F47044BA836CEB3DB4642B /* FlutterStcTutkPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AFACE8DE175B457D0B413E075B8F89DD /* FlutterStcTutkPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DAE39FAF5A0A31B77B09939A7763C8FE /* IOTCWakeUp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F7DE0BBE6526CE728DE8E3B3742A9 /* IOTCWakeUp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EA744D8A43BBCD7FCEA6CA8835E2505B /* NaluFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7127227BD5A1EAAD97AC1BC780F9289A /* NaluFrame.m */; };
+		EC315A860A08EBB0A98F5F5158C9F349 /* TutkClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD3D352AFD21B0734C3C2EB7EEC819 /* TutkClientManager.m */; };
+		F6BD1765CF04EABB07A8ECF429F02FFC /* TutkCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E34EFE452E0AF08ED4E25453702B2422 /* TutkCommandManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ABAB9F436D0F2BA5F05B6C3745CF718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		10693537E6630457F8ABEC6B2B9D4A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
+			remoteInfo = Flutter;
+		};
+		DFBD24F2AC6CE119ADBAD59269EDFF0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D0330F21B04B7A0723C54519927350C;
+			remoteInfo = flutter_stc_tutk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04485285DC595CA97B09232B2C310CB5 /* flutter_stc_tutk.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = flutter_stc_tutk.podspec; path = ../../../../../../ios/flutter_stc_tutk.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0AC13F6809118E0A0A9F16352BB64638 /* AVIOCTRLDEFs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVIOCTRLDEFs.h; path = ../../../../../../../../ios/Classes/include/AVIOCTRLDEFs.h; sourceTree = "<group>"; };
+		0BFCEA83FF73561FC3966ED8A434AD54 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
+		0C7EA96F89BE1B31A39830F60DC72268 /* VideoPlayerViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoPlayerViewFactory.h; path = ../../../../../../../ios/Classes/VideoPlayerViewFactory.h; sourceTree = "<group>"; };
+		0DC67BA74E27F2CF878029FDA51E8B18 /* P2PTunnelAPIs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = P2PTunnelAPIs.h; path = ../../../../../../../../ios/Classes/include/P2PTunnelAPIs.h; sourceTree = "<group>"; };
+		0E80A2B21314CFD38F74F8A14CD63119 /* SocketClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SocketClient.m; path = ../../../../../../../ios/Classes/SocketClient.m; sourceTree = "<group>"; };
+		0FB8FFF62F4BCF0BA942F28F4B469FC2 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
+		2DE678EA35F064B32DD45B60D5FC931B /* NaluFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NaluFrame.h; path = ../../../../../../../ios/Classes/NaluFrame.h; sourceTree = "<group>"; };
+		37AEB4595130F40360BB065D75928227 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Flutter.framework; path = ../../../../../../../../../../flutter/bin/cache/artifacts/engine/ios/Flutter.framework; sourceTree = "<group>"; };
+		3E2F7DE0BBE6526CE728DE8E3B3742A9 /* IOTCWakeUp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IOTCWakeUp.h; path = ../../../../../../../../ios/Classes/include/IOTCWakeUp.h; sourceTree = "<group>"; };
+		3EF863111361FD390771CCE88827330E /* RDTAPIs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTAPIs.h; path = ../../../../../../../../ios/Classes/include/RDTAPIs.h; sourceTree = "<group>"; };
+		453C938FF6934C03E6E0FD25EEB7F871 /* VideoPlayerViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerViewFactory.m; path = ../../../../../../../ios/Classes/VideoPlayerViewFactory.m; sourceTree = "<group>"; };
+		4D3DDA0ED11E4DB9EEBACE8A2C5AE8CA /* flutter_stc_tutk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "flutter_stc_tutk-prefix.pch"; sourceTree = "<group>"; };
+		4E0797A3A83AD75C66EEAF04FDB50A42 /* VideoDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoDecompressor.h; path = ../../../../../../../ios/Classes/VideoDecompressor.h; sourceTree = "<group>"; };
+		4F215E4C46FA64D4DB3F724680D453AA /* platform_Config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = platform_Config.h; path = ../../../../../../../../ios/Classes/include/platform_Config.h; sourceTree = "<group>"; };
+		4FDD3D352AFD21B0734C3C2EB7EEC819 /* TutkClientManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TutkClientManager.m; path = ../../../../../../../ios/Classes/TutkClientManager.m; sourceTree = "<group>"; };
+		5352531162F7BD3A701D35503D676643 /* TutkCommandManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TutkCommandManager.h; path = ../../../../../../../ios/Classes/TutkCommandManager.h; sourceTree = "<group>"; };
+		602C7DD5A16998D1DD3C67236BFBDD17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../../../../../../LICENSE; sourceTree = "<group>"; };
+		63FF9F6E16F328E601D9462D1B56D248 /* TutkLoctlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TutkLoctlCommand.h; path = ../../../../../../../ios/Classes/TutkLoctlCommand.h; sourceTree = "<group>"; };
+		657CD53F4EA54B38C033E65B1381372F /* Flutter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
+		669E8F25E1897672BDB80B7EB784DA24 /* libPods-Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Runner.a"; path = "libPods-Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7127227BD5A1EAAD97AC1BC780F9289A /* NaluFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NaluFrame.m; path = ../../../../../../../ios/Classes/NaluFrame.m; sourceTree = "<group>"; };
+		7233FB841D7F1835AB801817216445BE /* libIOTCAPIs_ALL.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libIOTCAPIs_ALL.a; path = ../../../../../../ios/Libraries/libIOTCAPIs_ALL.a; sourceTree = "<group>"; };
+		72B25B9466349B2C5982F4139FFA471B /* FlutterStcTutkPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlutterStcTutkPlugin.m; path = ../../../../../../../ios/Classes/FlutterStcTutkPlugin.m; sourceTree = "<group>"; };
+		73EE45CC5C5F9C2A43D57652391C79BD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../../../../../../../../../../flutter/bin/cache/artifacts/engine/ios/LICENSE; sourceTree = "<group>"; };
+		7A1562262B816BD185530C95C47BFEE3 /* SocketClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketClient.h; path = ../../../../../../../ios/Classes/SocketClient.h; sourceTree = "<group>"; };
+		7B665294547DECB72F5498C604C67E00 /* VideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VideoView.m; path = ../../../../../../../ios/Classes/VideoView.m; sourceTree = "<group>"; };
+		8515B80EF9971C8130DAA0737DEF266B /* flutter_stc_tutk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "flutter_stc_tutk-dummy.m"; sourceTree = "<group>"; };
+		882D01D0E1044578A4D274DF66202490 /* TutkClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TutkClient.m; path = ../../../../../../../ios/Classes/TutkClient.m; sourceTree = "<group>"; };
+		8C3477F1E6616960E815FBE9E0140F1C /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
+		90B4DC849CC77860C806A814ED01666E /* flutter_stc_tutk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = flutter_stc_tutk.xcconfig; sourceTree = "<group>"; };
+		944FF8113AC433F01214CE993B171CA4 /* VideoDecompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VideoDecompressor.m; path = ../../../../../../../ios/Classes/VideoDecompressor.m; sourceTree = "<group>"; };
+		978E98EF940F5DC6D899C857AF65E712 /* AVAPIs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAPIs.h; path = ../../../../../../../../ios/Classes/include/AVAPIs.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A970CAB09EB9C4FCC0F0434F2DD939FE /* TUTKConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TUTKConstants.h; path = ../../../../../../../ios/Classes/TUTKConstants.h; sourceTree = "<group>"; };
+		AC7FBC98C1CE12F1429E725F0F7EA434 /* TutkClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TutkClient.h; path = ../../../../../../../ios/Classes/TutkClient.h; sourceTree = "<group>"; };
+		ADBE214423F3189F08E96E8C1DC3C87F /* VideoPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerView.m; path = ../../../../../../../ios/Classes/VideoPlayerView.m; sourceTree = "<group>"; };
+		AFACE8DE175B457D0B413E075B8F89DD /* FlutterStcTutkPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlutterStcTutkPlugin.h; path = ../../../../../../../ios/Classes/FlutterStcTutkPlugin.h; sourceTree = "<group>"; };
+		B3C9D3CFCF3FA7E3BB8B31D0E3B0DA40 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		B96BC5C61F2983ADC1E3DFCEEF624A67 /* AVAPIs2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAPIs2.h; path = ../../../../../../../../ios/Classes/include/AVAPIs2.h; sourceTree = "<group>"; };
+		BD426538DFAB7E2FE2E86AD874663209 /* AVFRAMEINFO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFRAMEINFO.h; path = ../../../../../../../../ios/Classes/include/AVFRAMEINFO.h; sourceTree = "<group>"; };
+		BEFADF1E6E35C58C61462D21B0D74A18 /* IOTCAPIs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IOTCAPIs.h; path = ../../../../../../../../ios/Classes/include/IOTCAPIs.h; sourceTree = "<group>"; };
+		CDB8E0FBB11DE16F1253DE41838094BA /* libIOTCAPIs_P2PTunnel.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libIOTCAPIs_P2PTunnel.a; path = ../../../../../../ios/Libraries/libIOTCAPIs_P2PTunnel.a; sourceTree = "<group>"; };
+		D4135FE5EE131AEC42B8AFA88B480199 /* TutkTunnelClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TutkTunnelClient.h; path = ../../../../../../../ios/Classes/TutkTunnelClient.h; sourceTree = "<group>"; };
+		D513F0940EC0FEF6579A111547699C4D /* TutkClientManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TutkClientManager.h; path = ../../../../../../../ios/Classes/TutkClientManager.h; sourceTree = "<group>"; };
+		DBFE33F22D4C440F4D2953C561250E41 /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Flutter.podspec; path = ../../../../../../../../../../flutter/bin/cache/artifacts/engine/ios/Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DF0AF5474C02B0E1B187AA8DC4AE41BC /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		E2CF92120EE4401BE0518F1FDFBF2D5F /* TutkTunnelClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TutkTunnelClient.m; path = ../../../../../../../ios/Classes/TutkTunnelClient.m; sourceTree = "<group>"; };
+		E34EFE452E0AF08ED4E25453702B2422 /* TutkCommandManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TutkCommandManager.m; path = ../../../../../../../ios/Classes/TutkCommandManager.m; sourceTree = "<group>"; };
+		E4EC2B37107B6075B0301C2532291F5E /* libflutter_stc_tutk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libflutter_stc_tutk.a; path = libflutter_stc_tutk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5ABAE8C92A5056077FF6F02481D7B6C /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		EA4AF292494BBF52AE2E938BAB589B75 /* VideoPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoPlayerView.h; path = ../../../../../../../ios/Classes/VideoPlayerView.h; sourceTree = "<group>"; };
+		ED468541C49D0804BC43219649F55161 /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF80733757B1DBB08CB13716EE215501 /* VideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoView.h; path = ../../../../../../../ios/Classes/VideoView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4680EE6323BE5FF7160B188FF77960C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB832546751203483F0DE998B06A747F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA00D71D48B04BF9C41C769EFBFB9D5 /* Pods-Runner */ = {
+			isa = PBXGroup;
+			children = (
+				ED468541C49D0804BC43219649F55161 /* Pods-Runner-acknowledgements.markdown */,
+				8C3477F1E6616960E815FBE9E0140F1C /* Pods-Runner-acknowledgements.plist */,
+				0FB8FFF62F4BCF0BA942F28F4B469FC2 /* Pods-Runner-dummy.m */,
+				0BFCEA83FF73561FC3966ED8A434AD54 /* Pods-Runner-frameworks.sh */,
+				B3C9D3CFCF3FA7E3BB8B31D0E3B0DA40 /* Pods-Runner.debug.xcconfig */,
+				DF0AF5474C02B0E1B187AA8DC4AE41BC /* Pods-Runner.profile.xcconfig */,
+				E5ABAE8C92A5056077FF6F02481D7B6C /* Pods-Runner.release.xcconfig */,
+			);
+			name = "Pods-Runner";
+			path = "Target Support Files/Pods-Runner";
+			sourceTree = "<group>";
+		};
+		14C41773652CB8EF75D357EA7D629D2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFACE8DE175B457D0B413E075B8F89DD /* FlutterStcTutkPlugin.h */,
+				72B25B9466349B2C5982F4139FFA471B /* FlutterStcTutkPlugin.m */,
+				2DE678EA35F064B32DD45B60D5FC931B /* NaluFrame.h */,
+				7127227BD5A1EAAD97AC1BC780F9289A /* NaluFrame.m */,
+				7A1562262B816BD185530C95C47BFEE3 /* SocketClient.h */,
+				0E80A2B21314CFD38F74F8A14CD63119 /* SocketClient.m */,
+				AC7FBC98C1CE12F1429E725F0F7EA434 /* TutkClient.h */,
+				882D01D0E1044578A4D274DF66202490 /* TutkClient.m */,
+				D513F0940EC0FEF6579A111547699C4D /* TutkClientManager.h */,
+				4FDD3D352AFD21B0734C3C2EB7EEC819 /* TutkClientManager.m */,
+				5352531162F7BD3A701D35503D676643 /* TutkCommandManager.h */,
+				E34EFE452E0AF08ED4E25453702B2422 /* TutkCommandManager.m */,
+				A970CAB09EB9C4FCC0F0434F2DD939FE /* TUTKConstants.h */,
+				63FF9F6E16F328E601D9462D1B56D248 /* TutkLoctlCommand.h */,
+				D4135FE5EE131AEC42B8AFA88B480199 /* TutkTunnelClient.h */,
+				E2CF92120EE4401BE0518F1FDFBF2D5F /* TutkTunnelClient.m */,
+				4E0797A3A83AD75C66EEAF04FDB50A42 /* VideoDecompressor.h */,
+				944FF8113AC433F01214CE993B171CA4 /* VideoDecompressor.m */,
+				EA4AF292494BBF52AE2E938BAB589B75 /* VideoPlayerView.h */,
+				ADBE214423F3189F08E96E8C1DC3C87F /* VideoPlayerView.m */,
+				0C7EA96F89BE1B31A39830F60DC72268 /* VideoPlayerViewFactory.h */,
+				453C938FF6934C03E6E0FD25EEB7F871 /* VideoPlayerViewFactory.m */,
+				FF80733757B1DBB08CB13716EE215501 /* VideoView.h */,
+				7B665294547DECB72F5498C604C67E00 /* VideoView.m */,
+				F5AD81B9373FD863D7A42AA14008E0BC /* include */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		18E6357B4C3AD108B4D95DC0F7638747 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE33F22D4C440F4D2953C561250E41 /* Flutter.podspec */,
+				73EE45CC5C5F9C2A43D57652391C79BD /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		31AB98F0324A6389BB1AA41308046AFC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54208995FB711418511AA6049229DAC3 /* Flutter */,
+				89FB5D28C45F215307314B1D9E0F0BF3 /* flutter_stc_tutk */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3559D3B431026263A96630459195E35C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90B4DC849CC77860C806A814ED01666E /* flutter_stc_tutk.xcconfig */,
+				8515B80EF9971C8130DAA0737DEF266B /* flutter_stc_tutk-dummy.m */,
+				4D3DDA0ED11E4DB9EEBACE8A2C5AE8CA /* flutter_stc_tutk-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/flutter_stc_tutk";
+			sourceTree = "<group>";
+		};
+		4BD8A116F808A375E5E4F5BD000DDBE0 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				AFA065A227419E9B689DC0E8BD362185 /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		54208995FB711418511AA6049229DAC3 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				EE7E2B95500F45A081310D42FCBD59A1 /* Frameworks */,
+				18E6357B4C3AD108B4D95DC0F7638747 /* Pod */,
+				9C39EDE91C5E3AE85011F609373612A5 /* Support Files */,
+			);
+			name = Flutter;
+			path = ../.symlinks/flutter/ios;
+			sourceTree = "<group>";
+		};
+		6A5890FB49CB1365A51DB9CBF9704814 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				9F28E50AA74642C4DAE0B2AEF936D2C4 /* flutter_stc_tutk */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		6A7A9FDF402624777865CC44B615D841 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				04485285DC595CA97B09232B2C310CB5 /* flutter_stc_tutk.podspec */,
+				602C7DD5A16998D1DD3C67236BFBDD17 /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6F2A2EF8165275926B54C1764A239A70 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AA00D71D48B04BF9C41C769EFBFB9D5 /* Pods-Runner */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		760249B525D65B51D8DAAA45696D9BF0 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				4BD8A116F808A375E5E4F5BD000DDBE0 /* ios */,
+			);
+			name = example;
+			path = example;
+			sourceTree = "<group>";
+		};
+		89FB5D28C45F215307314B1D9E0F0BF3 /* flutter_stc_tutk */ = {
+			isa = PBXGroup;
+			children = (
+				D2DBACDC9AB3D4B08AB31D434EF30D50 /* .. */,
+				8F1EE4605577F28A8DA235907C72B7AC /* Frameworks */,
+				6A7A9FDF402624777865CC44B615D841 /* Pod */,
+				3559D3B431026263A96630459195E35C /* Support Files */,
+			);
+			name = flutter_stc_tutk;
+			path = ../.symlinks/plugins/flutter_stc_tutk/ios;
+			sourceTree = "<group>";
+		};
+		8E298A67F9A2594A8FDCA0C4AD03D020 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				14C41773652CB8EF75D357EA7D629D2C /* Classes */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		8F1EE4605577F28A8DA235907C72B7AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7233FB841D7F1835AB801817216445BE /* libIOTCAPIs_ALL.a */,
+				CDB8E0FBB11DE16F1253DE41838094BA /* libIOTCAPIs_P2PTunnel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C39EDE91C5E3AE85011F609373612A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				657CD53F4EA54B38C033E65B1381372F /* Flutter.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../Pods/Target Support Files/Flutter";
+			sourceTree = "<group>";
+		};
+		9F28E50AA74642C4DAE0B2AEF936D2C4 /* flutter_stc_tutk */ = {
+			isa = PBXGroup;
+			children = (
+				8E298A67F9A2594A8FDCA0C4AD03D020 /* ios */,
+			);
+			name = flutter_stc_tutk;
+			path = flutter_stc_tutk;
+			sourceTree = "<group>";
+		};
+		9F60E47F7E6F8B48E4676C7A55487A03 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				760249B525D65B51D8DAAA45696D9BF0 /* example */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AFA065A227419E9B689DC0E8BD362185 /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				6A5890FB49CB1365A51DB9CBF9704814 /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				31AB98F0324A6389BB1AA41308046AFC /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				E4A1391B931A0D7E28C9A3073E14796B /* Products */,
+				6F2A2EF8165275926B54C1764A239A70 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2DBACDC9AB3D4B08AB31D434EF30D50 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				9F60E47F7E6F8B48E4676C7A55487A03 /* .. */,
+			);
+			name = ..;
+			path = ../../../../../../ios;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4A1391B931A0D7E28C9A3073E14796B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4EC2B37107B6075B0301C2532291F5E /* libflutter_stc_tutk.a */,
+				669E8F25E1897672BDB80B7EB784DA24 /* libPods-Runner.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE7E2B95500F45A081310D42FCBD59A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37AEB4595130F40360BB065D75928227 /* Flutter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5AD81B9373FD863D7A42AA14008E0BC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				978E98EF940F5DC6D899C857AF65E712 /* AVAPIs.h */,
+				B96BC5C61F2983ADC1E3DFCEEF624A67 /* AVAPIs2.h */,
+				BD426538DFAB7E2FE2E86AD874663209 /* AVFRAMEINFO.h */,
+				0AC13F6809118E0A0A9F16352BB64638 /* AVIOCTRLDEFs.h */,
+				BEFADF1E6E35C58C61462D21B0D74A18 /* IOTCAPIs.h */,
+				3E2F7DE0BBE6526CE728DE8E3B3742A9 /* IOTCWakeUp.h */,
+				0DC67BA74E27F2CF878029FDA51E8B18 /* P2PTunnelAPIs.h */,
+				4F215E4C46FA64D4DB3F724680D453AA /* platform_Config.h */,
+				3EF863111361FD390771CCE88827330E /* RDTAPIs.h */,
+			);
+			name = include;
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D544099D4288443E0E259AA0455382AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE798DFEA4948A47396377435F71B4B /* AVAPIs.h in Headers */,
+				81096B8C919D0733918080220B503808 /* AVAPIs2.h in Headers */,
+				BF142CE90C5A7EAEBACA802D7BE9DB97 /* AVFRAMEINFO.h in Headers */,
+				8BFAC07C53493073E3754A083BA8DDC1 /* AVIOCTRLDEFs.h in Headers */,
+				D90C3CD035F47044BA836CEB3DB4642B /* FlutterStcTutkPlugin.h in Headers */,
+				B8DD1688A74E8979BF337660321F53B1 /* IOTCAPIs.h in Headers */,
+				DAE39FAF5A0A31B77B09939A7763C8FE /* IOTCWakeUp.h in Headers */,
+				4ED0EC2B801456F5D1D063E2FCA29188 /* NaluFrame.h in Headers */,
+				1C75B98D42CEF4E5D95ECEAD5DE10CC9 /* P2PTunnelAPIs.h in Headers */,
+				57CBDFDA494558C3567DE52FD026A293 /* platform_Config.h in Headers */,
+				512E01444440CAA5B01E07A9CAE1716B /* RDTAPIs.h in Headers */,
+				6EEEB10C1E206243879F9291F3612DE3 /* SocketClient.h in Headers */,
+				7B1232D1CEFBB507E4C883E04526A7BF /* TutkClient.h in Headers */,
+				D655CD9727B23E4FA93682C963343901 /* TutkClientManager.h in Headers */,
+				21517C23CAFFD4E48D428A5BE7963D50 /* TutkCommandManager.h in Headers */,
+				89FE9440C143DE6BA88FEC165F55D51A /* TUTKConstants.h in Headers */,
+				3E002AC2E4419611614BE5DFABA82452 /* TutkLoctlCommand.h in Headers */,
+				38538695C1414433CCFDC881F2E2D106 /* TutkTunnelClient.h in Headers */,
+				D4F4D5B62431A655430AF6908C2543B8 /* VideoDecompressor.h in Headers */,
+				0472E714C4E9DA6D42AF22094CF3DD4C /* VideoPlayerView.h in Headers */,
+				1CD2F7F78A6917A96C8A1CFDD02D6B5F /* VideoPlayerViewFactory.h in Headers */,
+				1B103F31FB5EA974114144571BF2590E /* VideoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4D84B34CBCE71418B1042E071D472FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8B74B458B450D74B75744B87BD747314 /* Pods-Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D1CBD5C79865DD0619006FC8CD5CE2 /* Build configuration list for PBXNativeTarget "Pods-Runner" */;
+			buildPhases = (
+				F4D84B34CBCE71418B1042E071D472FF /* Headers */,
+				5C5E5D7047C2CC3DFD464C2DC2FC393C /* Sources */,
+				FB832546751203483F0DE998B06A747F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C5137196D52EB5B50A5A4AFAB2515E8 /* PBXTargetDependency */,
+				A09263807C0FA9E4BFA2C838B5932044 /* PBXTargetDependency */,
+			);
+			name = "Pods-Runner";
+			productName = "Pods-Runner";
+			productReference = 669E8F25E1897672BDB80B7EB784DA24 /* libPods-Runner.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9D0330F21B04B7A0723C54519927350C /* flutter_stc_tutk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 321A29EF19905E06AC5283DB3BF9911B /* Build configuration list for PBXNativeTarget "flutter_stc_tutk" */;
+			buildPhases = (
+				D544099D4288443E0E259AA0455382AD /* Headers */,
+				583D619E043588D8258F1B1ED97B1992 /* Sources */,
+				4680EE6323BE5FF7160B188FF77960C3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED213E68508B022CE7ED3CA6FA9B271B /* PBXTargetDependency */,
+			);
+			name = flutter_stc_tutk;
+			productName = flutter_stc_tutk;
+			productReference = E4EC2B37107B6075B0301C2532291F5E /* libflutter_stc_tutk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E4A1391B931A0D7E28C9A3073E14796B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */,
+				9D0330F21B04B7A0723C54519927350C /* flutter_stc_tutk */,
+				8B74B458B450D74B75744B87BD747314 /* Pods-Runner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		583D619E043588D8258F1B1ED97B1992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6864250543C28FDBCDC09843BD1A2CE /* flutter_stc_tutk-dummy.m in Sources */,
+				1940561A7B2FD040F95A8739DC7BCE71 /* FlutterStcTutkPlugin.m in Sources */,
+				EA744D8A43BBCD7FCEA6CA8835E2505B /* NaluFrame.m in Sources */,
+				1873307C96728E5DC1C0C39DA2AF5512 /* SocketClient.m in Sources */,
+				1F887154CB508B0C929B05A4C774851F /* TutkClient.m in Sources */,
+				EC315A860A08EBB0A98F5F5158C9F349 /* TutkClientManager.m in Sources */,
+				F6BD1765CF04EABB07A8ECF429F02FFC /* TutkCommandManager.m in Sources */,
+				44EB974E609A7D7E582F96C0E0D0C62A /* TutkTunnelClient.m in Sources */,
+				977CFE987601454F0DDBCB9CA923A6E0 /* VideoDecompressor.m in Sources */,
+				69ED6B054C38B4C195E8D6745D2E7B5F /* VideoPlayerView.m in Sources */,
+				9D7679B858629F9FAB8D5F972C3C6907 /* VideoPlayerViewFactory.m in Sources */,
+				9B534BE9A8019A62E7014F1B6B214F3E /* VideoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C5E5D7047C2CC3DFD464C2DC2FC393C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA84A37F08D1AFFBB6E10827BFD3F34 /* Pods-Runner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C5137196D52EB5B50A5A4AFAB2515E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 0ABAB9F436D0F2BA5F05B6C3745CF718 /* PBXContainerItemProxy */;
+		};
+		A09263807C0FA9E4BFA2C838B5932044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = flutter_stc_tutk;
+			target = 9D0330F21B04B7A0723C54519927350C /* flutter_stc_tutk */;
+			targetProxy = DFBD24F2AC6CE119ADBAD59269EDFF0C /* PBXContainerItemProxy */;
+		};
+		ED213E68508B022CE7ED3CA6FA9B271B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
+			targetProxy = 10693537E6630457F8ABEC6B2B9D4A0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2EA06DD88282EB31547427BDD7BA028F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B4DC849CC77860C806A814ED01666E /* flutter_stc_tutk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/flutter_stc_tutk/flutter_stc_tutk-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = flutter_stc_tutk;
+				PRODUCT_NAME = flutter_stc_tutk;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		505D6459C3B6FA016CD543741FD1D0B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B4DC849CC77860C806A814ED01666E /* flutter_stc_tutk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/flutter_stc_tutk/flutter_stc_tutk-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = flutter_stc_tutk;
+				PRODUCT_NAME = flutter_stc_tutk;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		525D3B07A5A70795AD7B30DA43D5FCF7 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_PROFILE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Profile;
+		};
+		895E2867E73A4F53A022BAE5AD196379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657CD53F4EA54B38C033E65B1381372F /* Flutter.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9FA6B99CB9ECB63CCAB82DF6A04AA9F1 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF0AF5474C02B0E1B187AA8DC4AE41BC /* Pods-Runner.profile.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		A94EBF4E8F127A41691C10095F7BBBA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657CD53F4EA54B38C033E65B1381372F /* Flutter.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD47F474DB0BF7FCF1D2D30BBB55986E /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B4DC849CC77860C806A814ED01666E /* flutter_stc_tutk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/flutter_stc_tutk/flutter_stc_tutk-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = flutter_stc_tutk;
+				PRODUCT_NAME = flutter_stc_tutk;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		B064E1C981D836A5C76FDAC49FCB568E /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657CD53F4EA54B38C033E65B1381372F /* Flutter.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		C00819F869D6F32CF1410F363CD6DAD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5ABAE8C92A5056077FF6F02481D7B6C /* Pods-Runner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBBE429B18C5DBD266FBA5BA786693C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C9D3CFCF3FA7E3BB8B31D0E3B0DA40 /* Pods-Runner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		321A29EF19905E06AC5283DB3BF9911B /* Build configuration list for PBXNativeTarget "flutter_stc_tutk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA06DD88282EB31547427BDD7BA028F /* Debug */,
+				AD47F474DB0BF7FCF1D2D30BBB55986E /* Profile */,
+				505D6459C3B6FA016CD543741FD1D0B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				525D3B07A5A70795AD7B30DA43D5FCF7 /* Profile */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D1CBD5C79865DD0619006FC8CD5CE2 /* Build configuration list for PBXNativeTarget "Pods-Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBE429B18C5DBD266FBA5BA786693C4 /* Debug */,
+				9FA6B99CB9ECB63CCAB82DF6A04AA9F1 /* Profile */,
+				C00819F869D6F32CF1410F363CD6DAD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				895E2867E73A4F53A022BAE5AD196379 /* Debug */,
+				B064E1C981D836A5C76FDAC49FCB568E /* Profile */,
+				A94EBF4E8F127A41691C10095F7BBBA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

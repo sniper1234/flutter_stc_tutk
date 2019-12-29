@@ -1,0 +1,40 @@
+{
+  "name": "flutter_stc_tutk",
+  "version": "0.0.1",
+  "summary": "The Flutter iOS SDK library for STC scenes app based on Tutk.",
+  "description": "The Flutter iOS SDK library for STC scenes app based on Tutk. It is only used for STC devices connection.",
+  "homepage": "https://github.com/sniper1234/flutter_stc_tutk",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Scenes Tek": "lawrence.sun@scenestek.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "AVFoundation",
+    "CoreVideo",
+    "CoreMedia",
+    "VideoToolbox",
+    "CoreGraphics",
+    "CoreData"
+  ],
+  "vendored_libraries": [
+    "Libraries/libIOTCAPIs_ALL.a",
+    "Libraries/libIOTCAPIs_P2PTunnel.a"
+  ]
+}

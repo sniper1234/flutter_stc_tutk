@@ -1,4 +1,4 @@
-package com.stc.flutter.tutk.flutter_stc_tutk_example;
+package com.stc.flutter.tutk.app;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

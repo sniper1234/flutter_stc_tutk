@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.stc.flutter.tutk.flutter_stc_tutk_example">
+    package="com.stc.flutter.tutk.app">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -16,7 +16,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="flutter_stc_tutk_example">
         <activity
-            android:name=".MainActivity"
+            android:name="com.stc.flutter.tutk.app.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

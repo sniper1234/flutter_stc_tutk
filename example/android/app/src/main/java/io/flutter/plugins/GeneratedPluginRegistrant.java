@@ -11,7 +11,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
-    FlutterStcTutkPlugin.registerWith(registry.registrarFor("com.stc.flutter.tutk.flutter_stc_tutk.FlutterStcTutkPlugin"));
+    FlutterStcTutkPlugin.registerWith(registry.registrarFor("com.stc.flutter.tutk.app.FlutterStcTutkPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

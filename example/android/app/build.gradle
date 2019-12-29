@@ -32,7 +32,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.stc.flutter.tutk.flutter_stc_tutk_example"
+        applicationId "com.stc.flutter.tutk.app"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()

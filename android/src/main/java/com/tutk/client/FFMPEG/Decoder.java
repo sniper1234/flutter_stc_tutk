@@ -20,10 +20,7 @@ public class Decoder extends Thread {
 
     public boolean Init() {
         native_decoder = new byte[8];
-        if (!init(native_decoder)) {
-            return false;
-        }
-        return true;
+        return init(native_decoder);
     }
 
     public boolean Deinit() {
@@ -50,7 +47,6 @@ public class Decoder extends Thread {
                 }
             }
 
-            ;
         };
         Looper.loop();
     }

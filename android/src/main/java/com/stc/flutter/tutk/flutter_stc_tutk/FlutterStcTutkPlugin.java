@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.Surface;
 import android.view.SurfaceView;
+import android.widget.ImageView;
 
 import com.tutk.client.FFMPEG.Decoder;
 
@@ -14,15 +16,14 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMessageCodec;
+import io.flutter.view.TextureRegistry;
 
 /**
  * FlutterStcTutkPlugin
  */
 public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.ActivityResultListener {
 
-    private final Context context;
-
-    private final Activity activity;
 
     protected CommApis m_commApis;
 
@@ -30,10 +31,17 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
 
     private Decoder decoder;
 
+    private final Registrar flutterRegistrar;
 
-    private FlutterStcTutkPlugin(Activity activity, Context context) {
-        this.context = context;
-        this.activity = activity;
+    private TextureRegistry textureRegistry;
+    private TextureRegistry.SurfaceTextureEntry surfaceTextureEntry;
+    private Surface surface;
+
+
+    private FlutterStcTutkPlugin(Registrar flutterRegistrar) {
+        this.flutterRegistrar = flutterRegistrar;
+//        textureRegistry=flutterRegistrar.textures();
+
         m_commApis = new CommApis();
     }
 
@@ -44,7 +52,7 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_stc_tutk");
 
         //传入Activity
-        final FlutterStcTutkPlugin plugin = new FlutterStcTutkPlugin(registrar.activity(), registrar.activeContext());
+        final FlutterStcTutkPlugin plugin = new FlutterStcTutkPlugin(registrar);
         channel.setMethodCallHandler(plugin);
 
 
@@ -56,7 +64,7 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
             }
         });
 
-        flutterStcTutkFactory = new FlutterStcTutkFactory(registrar.messenger(), channel);
+        flutterStcTutkFactory = new FlutterStcTutkFactory(new StandardMessageCodec(), new SurfaceView(registrar.activeContext()));
 
         registrar
                 .platformViewRegistry()
@@ -73,11 +81,25 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
             case "startLiveVideo": //播放视频
                 String uid = call.argument("uid");
                 String deviceSN = call.argument("deviceSN");
+//                textureRegistry = flutterRegistrar.textures();
+//                surfaceTextureEntry = textureRegistry.createSurfaceTexture();
+//                //通过一个刚刚创建的SurfaceTexure作为参数创建一个Surface
+//                surface = new Surface(surfaceTextureEntry.surfaceTexture());
+
                 startLiveVideo(uid, deviceSN);
+                result.success(null);
                 break;
             case "stopLiveVideo": //停止视频
-                m_commApis.stopSess();
-                m_commApis.unInitIOTC();
+                try {
+                    m_commApis.stopSess();
+                    m_commApis.unInitIOTC();
+                } catch (Exception e) {
+                    System.out.printf("关闭失败\n");
+                }
+                if (decoder != null) {
+                    decoder.Deinit();
+                }
+                result.success(null);
                 break;
             case "pauseLiveVideo": //暂停视频
 
@@ -91,7 +113,7 @@ public class FlutterStcTutkPlugin implements MethodCallHandler, PluginRegistry.A
 
     private void startLiveVideo(String uid, String deviceSN) {
         m_commApis.initIOTC();
-        decoder = new Decoder((SurfaceView) flutterStcTutkFactory.getFlutterSurfaceView().getView());
+        decoder = new Decoder(flutterStcTutkFactory.getFlutterSurfaceView());
         if (!decoder.Init()) {
             Log.e("tutk", "init decoder failed");
             return;

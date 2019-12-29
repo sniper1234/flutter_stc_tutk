@@ -6,11 +6,9 @@ import android.os.Message;
 
 import com.tutk.IOTC.AVAPIs;
 import com.tutk.IOTC.IOTCAPIs;
-import com.tutk.IOTC.St_SInfo;
-import com.tutk.IOTC.TutkLoctlCommand;
-import com.tutk.IOTC.st_SearchDeviceInfo;
 
-import java.io.UnsupportedEncodingException;
+import com.tutk.IOTC.TutkLoctlCommand;
+
 import java.util.Arrays;
 
 public class CommApis extends IOTCAPIs {
@@ -21,6 +19,8 @@ public class CommApis extends IOTCAPIs {
     private int nSID = -1;
     protected String m_strUID;
     protected int avIndex = -1;
+
+    private boolean isStartVideo = false;
 
 
     private Handler handler;
@@ -87,6 +87,10 @@ public class CommApis extends IOTCAPIs {
                     System.out.println(e.getMessage());
                     return;
                 }
+                isStartVideo = true;
+            } else {
+                IOTCAPIs.IOTC_Session_Close(nSID);
+                unInitIOTC();
             }
             AVAPIs.avClientStop(avIndex);
             System.out.printf("avClientStop OK\n");
@@ -100,19 +104,21 @@ public class CommApis extends IOTCAPIs {
     }
 
     public void unInitIOTC() {
+        if (!isStartVideo) {
+            return;
+        }
         if (ms_nIOTCInit == IOTCAPIs.IOTC_ER_NoERROR) {
             IOTC_DeInitialize();
             ms_nIOTCInit = IOTCAPIs.IOTC_ER_TIMEOUT;
-
         }
     }
 
 
     public void stopSess() {
-
-
+        if (!isStartVideo) {
+            return;
+        }
         IOTC_Connect_Stop();
-
     }
 
 
@@ -123,7 +129,7 @@ public class CommApis extends IOTCAPIs {
     }
 
 
-    public static boolean startIpcamStream(int avIndex) {
+    private static boolean startIpcamStream(int avIndex) {
         AVAPIs av = new AVAPIs();
         int ret = av.avSendIOCtrl(avIndex, AVAPIs.IOTYPE_INNER_SND_DATA_DELAY,
                 new byte[2], 2);
@@ -167,7 +173,6 @@ public class CommApis extends IOTCAPIs {
         public void run() {
             System.out.printf("[%s] avIndex\n",
                     avIndex);
-//            TutkLoctlCommand.receiveVideoThread(avIndex);
             System.out.printf("[%s] Start\n",
                     Thread.currentThread().getName());
 
